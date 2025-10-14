@@ -114,8 +114,6 @@ print(name.isalpha())
 
 # --------------------------------------------------
 
-# Concatenation
-test1 = "Name"
 test2 = "Name2"
 
 result = test1 + " " + test2
