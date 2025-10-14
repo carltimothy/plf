@@ -111,3 +111,13 @@ print(f"Your name is {name} and age is {age}")
 print("Your name is %s and age is %d" % (name, age)) # %s means string and %d means digit
 
 print(name.isalpha()) 
+
+# --------------------------------------------------
+
+# Concatenation
+test1 = "Name"
+test2 = "Name2"
+
+result = test1 + " " + test2
+print(result)
+
