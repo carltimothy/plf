@@ -25,11 +25,11 @@ else:
                 print("Invalid input. Can only deposit ₱100, ₱200, ₱500, ₱1000", "\n")
         elif menu == 3:
             withdraw = int(input("Enter amount to withdraw: "))
-            if withdraw == 100 or withdraw == 200 or withdraw == 500 or withdraw == 1000:
+            if withdraw > balance:
+                print("Insufficient Balance!")
+            elif withdraw == 100 or withdraw == 200 or withdraw == 500 or withdraw == 1000:
                 balance -= withdraw
                 print(f"You took ₱{withdraw}. New Balance: ₱{balance:,}\n")
-            elif withdraw > balance:
-                print("Insufficient Balance!") 
             else:
                 print("Invalid input. Can only dispense ₱100, ₱200, ₱500, ₱1000", "\n")
         else:
