@@ -8,7 +8,7 @@ if not pin2 == pin:
     print("Invalid PIN!")
     exit()
 else:
-    user = username[0] + ("*" * len(username)) + username[-1]
+    user = username[0] + ("*" * (len(username) - 2)) + username[-1]
     print(f"Hello {user}! You have successfully logged in.", "\n")
     while True:
         print(" [1] Check Balance", "\n", "[2] Deposit", "\n", "[3] Withdraw", "\n", "[4] Exit")
