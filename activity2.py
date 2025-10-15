@@ -5,7 +5,7 @@ balance = 1000000
 pin2 = int(input("Enter your 4-digit PIN: "))
 
 if not pin2 == pin:
-    print("Invalid pin!")
+    print("Invalid PIN!")
     exit()
 else:
     user = username[0] + ("*" * len(username)) + username[-1]
@@ -19,7 +19,7 @@ else:
         elif menu == 2:
             amount = int(input("Enter amount to deposit: "))
             if amount == 100 or amount == 200 or amount == 500 or amount == 1000:
-                amount += balance
+                balance += amount
                 print(f"You deposited ₱{amount}. New Balance: ₱{balance}\n")
             else:
                 print("Invalid input. Can only deposit ₱100, ₱200, ₱500, ₱1000", "\n")
@@ -28,7 +28,10 @@ else:
             if withdraw == 100 or withdraw == 200 or withdraw == 500 or withdraw == 1000:
                 balance -= withdraw
                 print(f"You took ₱{withdraw}. New Balance: ₱{balance}\n")
+            elif withdraw >= balance:
+                print("Insufficient Balance!") 
             else:
                 print("Invalid input. Can only dispense ₱100, ₱200, ₱500, ₱1000", "\n")
         else:
             exit()
+            
