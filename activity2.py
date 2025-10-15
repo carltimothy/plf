@@ -18,15 +18,31 @@ else:
             print(f"Current Balance: ₱{balance}", "\n")
         elif menu == 2:
             amount = int(input("Enter amount to deposit: "))
-            if amount == 100 or 200 or 500 or 1000:
-                print(f"You deposited ₱{amount}. New Balance: ₱", (amount + balance), "\n")
+            if amount == 100:
+                amount += balance
+                print(f"You deposited ₱{amount}. New Balance: ₱{balance}\n")
+            elif amount == 200:
+                amount += balance
+                print(f"You deposited ₱{amount}. New Balance: ₱{balance}\n")
+            elif amount == 500:
+                amount += balance
+                print(f"You deposited ₱{amount}. New Balance: ₱{balance}\n")
+            elif amount == 1000:
+                amount += balance
+                print(f"You deposited ₱{amount}. New Balance: ₱{balance}\n")
             else:
                 print("Invalid input. Can only deposit ₱100, ₱200, ₱500, ₱1000", "\n")
         elif menu == 3:
             withdraw = int(input("Enter amount to withdraw: "))
-            if withdraw == 100 or 200 or 500 or 1000:
-                bal = balance - withdraw
-                print(f"You took ₱{withdraw}. New Balance: ₱{bal}", "\n")
+            if withdraw == 100:
+                balance -= withdraw
+                print(f"You took ₱{withdraw}. New Balance: ₱{balance}\n")
+            elif withdraw == 200:
+                print(f"You took ₱{withdraw}. New Balance: ₱{balance}\n")
+            elif withdraw == 500:
+                print(f"You took ₱{withdraw}. New Balance: ₱{balance}\n")
+            elif withdraw == 1000:
+                print(f"You took ₱{withdraw}. New Balance: ₱{balance}\n")
             else:
                 print("Invalid input. Can only dispense ₱100, ₱200, ₱500, ₱1000", "\n")
         else:
