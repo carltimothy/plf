@@ -1,6 +1,6 @@
 print("=== Welcome to CITBank ATM ===")
 pin = 1234
-username = "Carl Timothy"
+username = "Carl"
 balance = 1000000
 pin2 = int(input("Enter your 4-digit PIN: "))
 
@@ -32,6 +32,8 @@ else:
                 print(f"You took ₱{withdraw}. New Balance: ₱{balance:,}\n")
             else:
                 print("Invalid input. Can only dispense ₱100, ₱200, ₱500, ₱1000", "\n")
-        else:
+        elif menu == 4:
             exit()
+        else:
+            print("\n" "Choose only from the list.")
             
