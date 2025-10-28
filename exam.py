@@ -25,3 +25,23 @@ for ch in word:
     if ch == ['a', 'e', 'i', 'o', 'u']:
 
         print(f"Transformed Word: ")
+
+
+user = input("Enter a sentence: ")
+word = user.split()
+vowels = ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')
+vowelcount = 0
+consonantcount = 0
+transformed = []
+
+for word in word:
+    if word[0] in vowels:  
+        transformed.append(word.upper())
+        vowel_count += 1
+    else: 
+        transformed.append(word.lower())
+        consonant_count += 1
+
+print("\nTransformed Word:", " ".join(transformed))
+print("Words starting with vowel:", vowelcount)
+print("Words starting with consonant:", consonantcount)
